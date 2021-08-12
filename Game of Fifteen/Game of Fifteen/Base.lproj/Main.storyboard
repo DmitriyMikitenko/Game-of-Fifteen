@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Game_of_Fifteen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQv-U7-HfO">
+                                <rect key="frame" x="126" y="412" width="48" height="24"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="EE3-7q-uxU">
+                                <rect key="frame" x="126" y="26" width="348" height="348"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EE3-7q-uxU" secondAttribute="height" multiplier="1:1" id="NNL-lM-baX"/>
+                                    <constraint firstAttribute="height" constant="348" id="UZP-1I-6h1"/>
+                                    <constraint firstAttribute="width" constant="348" id="ieg-2n-BYR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EE3-7q-uxU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UqF-4P-4Lt"/>
+                            <constraint firstItem="EE3-7q-uxU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="dx9-JK-sDt"/>
+                            <constraint firstItem="sQv-U7-HfO" firstAttribute="leading" secondItem="EE3-7q-uxU" secondAttribute="leading" id="fc2-FN-HGz"/>
+                            <constraint firstItem="sQv-U7-HfO" firstAttribute="top" secondItem="EE3-7q-uxU" secondAttribute="bottom" constant="38" id="gJi-Ug-GI5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="EE3-7q-uxU" id="jxp-sK-fCV"/>
+                        <outlet property="moveCountLabel" destination="sQv-U7-HfO" id="p22-4f-jHZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530.43478260869574" y="85.044642857142847"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="n4E-UB-e9w">
+            <objects>
+                <viewController storyboardIdentifier="GameOverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cxc-bl-3h0" customClass="GameOverViewController" customModule="Game_of_Fifteen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0a-wm-MPf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПОБЕДА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHT-BU-Oap">
+                                <rect key="frame" x="183" y="46" width="234" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="eGh-G7-iYO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="53"/>
+                                <color key="textColor" red="0.93439799547195435" green="0.89611548185348511" blue="0.6830984354019165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="7"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golden_cup_PNG94627" translatesAutoresizingMaskIntoConstraints="NO" id="hQs-DL-mZk">
+                                <rect key="frame" x="119" y="164" width="362" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="xZG-Kq-Iej"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-do-DdT">
+                                <rect key="frame" x="168" y="605" width="78" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Новая игра"/>
+                                <connections>
+                                    <action selector="newGameButtonAction:" destination="Cxc-bl-3h0" eventType="touchUpInside" id="3AJ-8d-8Al"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n4a-pF-WVD"/>
+                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HHT-BU-Oap" firstAttribute="top" secondItem="n4a-pF-WVD" secondAttribute="top" constant="46" id="Got-eD-VSA"/>
+                            <constraint firstItem="n4a-pF-WVD" firstAttribute="bottom" secondItem="c0j-do-DdT" secondAttribute="bottom" constant="200" id="O8l-FI-ugF"/>
+                            <constraint firstItem="hQs-DL-mZk" firstAttribute="top" secondItem="HHT-BU-Oap" secondAttribute="bottom" constant="33" id="WIA-k1-XwL"/>
+                            <constraint firstItem="hQs-DL-mZk" firstAttribute="leading" secondItem="n4a-pF-WVD" secondAttribute="leading" constant="119" id="dvQ-oH-26P"/>
+                            <constraint firstItem="HHT-BU-Oap" firstAttribute="centerX" secondItem="hQs-DL-mZk" secondAttribute="centerX" id="pTv-Wg-0vw"/>
+                            <constraint firstItem="hQs-DL-mZk" firstAttribute="centerX" secondItem="c0j-do-DdT" secondAttribute="centerX" id="vuL-hS-bM4"/>
+                            <constraint firstItem="HHT-BU-Oap" firstAttribute="centerX" secondItem="y0a-wm-MPf" secondAttribute="centerX" id="zFt-2p-tsq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79a-E6-NI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="84.107946026986511"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="golden_cup_PNG94627" width="464" height="600"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
